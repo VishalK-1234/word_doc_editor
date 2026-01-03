@@ -34,8 +34,11 @@ const Index = () => {
   
       const formData = new FormData();
       formData.append("file", file);
+
+      const API_BASE = import.meta.env.VITE_API_BASE_URL;
+      if (!API_BASE) throw new Error("API base URL missing");
   
-      const response = await fetch("http://localhost:8000/extract-text", {
+      const response = await fetch(`${API_BASE}/extract-text`, {
         method: "POST",
         body: formData,
       });
