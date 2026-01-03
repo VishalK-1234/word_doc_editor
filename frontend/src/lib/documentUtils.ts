@@ -1,4 +1,3 @@
-
 export async function sendEditsToBackend(
   file: File,
   textMap: Record<string, string>
