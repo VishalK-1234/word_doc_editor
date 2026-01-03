@@ -12,7 +12,9 @@ app = FastAPI(title="Docx Editor Backend")
 # --------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],
+    allow_origins=["http://localhost:8080",
+                 "https://word-doc-editor-p.vercel.app",
+                 "https://word-doc-editor-psi.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
